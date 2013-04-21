@@ -2,7 +2,7 @@ require 'paypal-sdk-rest'
 
 include PayPal::SDK::REST
 
-SCHEDULER.every '30s' do
+SCHEDULER.every '2m' do
   payments =  Hash.new({ amount: '0.00 USD', email: '', state: '', created: '' });
   history = Payment.all(:count => 5)
   
