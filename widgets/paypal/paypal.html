@@ -1,0 +1,23 @@
+<h1 class="title" data-bind="title"></h1>
+
+<table>
+  <thead>
+    <tr>
+      <td>Date</td>
+      <td>User</td>
+      <td>Amount</td>
+      <td class="state">State</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr data-foreach-item="items">
+      <td data-bind="item.created"></td>
+      <td data-bind="item.email"></td>
+      <td data-bind="item.amount"></td>
+      <td class="state" data-bind="item.state"></td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="more-info" data-bind="moreinfo"></p>
+<p class="updated-at" data-bind="updatedAtMessage"></p>
